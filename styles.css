@@ -97,6 +97,7 @@ h3 { font-size: 1.15rem; }
   color: var(--text); max-width: 640px; margin: 0 auto 38px; line-height: 1.25;
 }
 .hero__lead .accent { color: var(--accent); }
+.hero__hint { margin: 16px auto 0; max-width: 520px; font-size: .82rem; color: var(--muted); position: relative; z-index: 1; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: stretch; justify-content: center; }
 
 .download {

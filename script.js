@@ -49,6 +49,7 @@
     if (S.launcher) {
       dl.href = S.launcher;
       dl.setAttribute("download", "");
+      dl.title = "Скачать установщик лаунчера";
       note.textContent = S.launcherNote || "";
       if (!S.launcherNote) note.hidden = true;
     } else {
@@ -56,6 +57,8 @@
       dl.classList.add("is-disabled");
       dl.setAttribute("aria-disabled", "true");
       note.textContent = "Скоро будет доступен";
+      var hint = document.getElementById("launcherHint");
+      if (hint) hint.hidden = true;
     }
   }
 
