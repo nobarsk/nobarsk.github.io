@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-14 -14 262 156" role="img" aria-label="NRP">
+  <!-- Надпись NRP в стиле логотипа Nobarsk: каждая линия — три параллельные полосы с тонкими зазорами.
+       R и P на одном уровне, N опущена ниже и уходит вниз. -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#27b07c"/>
+      <stop offset=".5" stop-color="#15915f"/>
+      <stop offset="1" stop-color="#0b6e4a"/>
+    </linearGradient>
+    <g id="letters" fill="none" stroke-linejoin="miter" stroke-miterlimit="2.2" stroke-linecap="butt">
+      <!-- N: сдвинута вниз на 28 -->
+      <path d="M0 128 V28 L58 128 V28"/>
+      <!-- R -->
+      <path d="M88 100 V0 H118 A27 27 0 0 1 118 54 H88 M110 54 L146 100"/>
+      <!-- P -->
+      <path d="M176 100 V0 H206 A27 27 0 0 1 206 54 H176"/>
+    </g>
+    <!-- 3 полосы по 5.2 и 2 зазора по 2.2: 20 - 9.6 + 5.2 -->
+    <mask id="m" maskUnits="userSpaceOnUse" x="-14" y="-14" width="262" height="156">
+      <use href="#letters" stroke="#fff" stroke-width="20"/>
+      <use href="#letters" stroke="#000" stroke-width="9.6"/>
+      <use href="#letters" stroke="#fff" stroke-width="5.2"/>
+    </mask>
+  </defs>
+  <rect x="-14" y="-14" width="262" height="156" fill="url(#g)" mask="url(#m)"/>
+</svg>

@@ -4,23 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nobarsk RP</title>
-  <meta name="description" content="Nobarsk RP — ролевой проект. Правила, как начать играть, форум и сообщество.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23e8a33d'/><text x='16' y='22' font-family='Arial' font-weight='700' font-size='15' text-anchor='middle' fill='%23141210'>NR</text></svg>">
+  <meta name="description" content="Nobarsk RP — ролевой проект. Правила, законы, как начать играть, Discord и сообщество.">
+  <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="config.js"></script>
 </head>
 <body>
   <header class="nav">
     <div class="wrap nav__inner">
-      <a class="brand" href="#top"><span class="brand__mark">NR</span><span data-site="name">Nobarsk RP</span></a>
+      <a class="brand" aria-label="Nobarsk RP — на главную" href="#top"><img class="brand__nrp" src="img/nrp.svg" alt="NRP — Nobarsk RP"></a>
       <nav class="nav__links" aria-label="Разделы">
         <a href="#about">О проекте</a>
         <a href="#start">Как начать</a>
-        <a href="#rules">Правила</a>
-        <a class="btn btn--small" data-link="forum" href="#">Форум</a>
+        <a href="rules.html">Правила</a>
+        <a href="laws.html">Законы</a>
+        <a class="btn btn--small" data-link="discord" href="#">Discord</a>
       </nav>
     </div>
   </header>
@@ -28,16 +29,20 @@
   <main id="top">
     <section class="hero">
       <div class="wrap">
-        <p class="eyebrow">Ролевой проект</p>
-        <h1 data-site="name">Nobarsk RP</h1>
-        <p class="hero__lead" data-site="tagline">Ролевой проект, где у каждого своя история</p>
+        <div class="hero__brand">
+          <img class="hero__logo" src="img/logo.png" alt="" aria-hidden="true">
+          <h1><span>Nobarsk</span><span class="accent">Roleplay</span></h1>
+        </div>
+        <p class="hero__lead"><span class="accent">Ролевой проект,</span> где у каждого своя история</p>
         <div class="hero__actions">
-          <button class="ip" type="button" id="copyIp" aria-label="Скопировать адрес сервера">
-            <span class="ip__label">Адрес сервера</span>
-            <span class="ip__value" data-site="serverIp">—</span>
-            <span class="ip__hint" id="copyHint">Нажми, чтобы скопировать</span>
-          </button>
-          <a class="btn" data-link="forum" href="#">Перейти на форум</a>
+          <a class="download" id="launcherBtn" href="#">
+            <svg class="download__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="download__text">
+              <span class="download__title">Скачать лаунчер</span>
+              <span class="download__note" id="launcherNote"></span>
+            </span>
+          </a>
+          <a class="btn btn--ghost" data-link="discord" href="#"><img src="img/discord.png" alt="" class="btn__ico">Перейти в Discord</a>
         </div>
       </div>
     </section>
@@ -52,11 +57,11 @@
           </article>
           <article class="card">
             <h3>Честная администрация</h3>
-            <p>Правила одни для всех. Жалобы и обжалования разбираются открыто на форуме.</p>
+            <p>Правила одни для всех. Жалобы и обжалования разбираются открыто в Discord.</p>
           </article>
           <article class="card">
             <h3>Сообщество</h3>
-            <p>На форуме можно обсуждать сюжеты, подавать заявки во фракции и предлагать идеи для развития проекта.</p>
+            <p>В Discord можно обсуждать сюжеты, подавать заявки во фракции и предлагать идеи для развития проекта.</p>
           </article>
         </div>
       </div>
@@ -66,24 +71,37 @@
       <div class="wrap">
         <h2>Как начать играть</h2>
         <ol class="steps">
-          <li><strong>Установи игру.</strong> Скачай клиент и проверь, что он запускается.</li>
-          <li><strong>Подключись к серверу.</strong> Скопируй адрес выше и добавь его в список серверов.</li>
+          <li><strong>Скачай лаунчер.</strong> Кнопка «Скачать лаунчер» вверху страницы.</li>
+          <li><strong>Установи и запусти.</strong> Лаунчер сам скачает игру и подключит тебя к серверу.</li>
           <li><strong>Создай персонажа.</strong> Придумай имя и историю, держись правил ролевой игры.</li>
-          <li><strong>Загляни на форум.</strong> Там новости, заявки во фракции и помощь новичкам.</li>
+          <li><strong>Заходи в Discord.</strong> Там новости, заявки во фракции и помощь новичкам.</li>
         </ol>
       </div>
     </section>
 
     <section id="rules" class="section">
       <div class="wrap">
-        <h2>Основные правила</h2>
-        <ul class="rules">
-          <li><span>01</span>Уважай других игроков и администрацию.</li>
-          <li><span>02</span>Отыгрывай роль: никакого DM, MG и PG.</li>
-          <li><span>03</span>Читы, баги и сторонний софт под запретом.</li>
-          <li><span>04</span>Спорные ситуации решаются через жалобу на форуме, а не в игре.</li>
-        </ul>
-        <p class="muted">Полный свод правил лежит на форуме.</p>
+        <p class="eyebrow">Свод правил</p>
+        <h2>Правила проекта</h2>
+        <p class="muted section-lead">Правила сервера для игроков. Прочитай перед первым заходом: незнание правил не освобождает от наказания.</p>
+        <div class="doc-cards">
+          <a class="doc-card" href="rules.html#opp"><span class="doc-card__icon"><img class="book-ico" src="img/book.png" alt=""></span><span class="doc-card__title">Общие правила проекта</span><span class="doc-card__lead muted">Правила проекта, лидеров, семей, союзов, поставок, ограблений, похищений и другие</span><span class="doc-card__go">Открыть →</span></a>
+          <a class="doc-card" href="rules.html#pgo"><span class="doc-card__icon"><img class="book-ico" src="img/book.png" alt=""></span><span class="doc-card__title">Правила гос. структур</span><span class="doc-card__lead muted">Основные правила, допросы, выборы</span><span class="doc-card__go">Открыть →</span></a>
+          <a class="doc-card" href="rules.html#pko"><span class="doc-card__icon"><img class="book-ico" src="img/book.png" alt=""></span><span class="doc-card__title">Правила крим. структур</span><span class="doc-card__lead muted">Дресс-код, войны за территории, бизнес и AirDrop, налёты</span><span class="doc-card__go">Открыть →</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="laws" class="section section--alt">
+      <div class="wrap">
+        <p class="eyebrow">Законы штата</p>
+        <h2>Законодательство</h2>
+        <p class="muted section-lead">Законы игрового мира, по которым живут персонажи: кодексы, федеральные законы и Конституция.</p>
+        <div class="doc-cards">
+          <a class="doc-card" href="laws.html#kod"><span class="doc-card__icon"><img class="book-ico" src="img/law-book.png" alt=""></span><span class="doc-card__title">Кодексы</span><span class="doc-card__lead muted">УК, КоАП, ТК, УПК, ГК</span><span class="doc-card__go">Открыть →</span></a>
+          <a class="doc-card" href="laws.html#fz"><span class="doc-card__icon"><img class="book-ico" src="img/law-book.png" alt=""></span><span class="doc-card__title">Федеральные законы</span><span class="doc-card__lead muted">О полиции, об оружии, о ФСБ и другие</span><span class="doc-card__go">Открыть →</span></a>
+          <a class="doc-card" href="laws.html#konst"><span class="doc-card__icon"><img class="book-ico" src="img/law-book.png" alt=""></span><span class="doc-card__title">Конституция</span><span class="doc-card__lead muted">Основной закон проекта</span><span class="doc-card__go">Открыть →</span></a>
+        </div>
       </div>
     </section>
 
@@ -91,21 +109,16 @@
       <div class="wrap cta">
         <div>
           <h2>Присоединяйся</h2>
-          <p class="muted">Новости, заявки и общение — на форуме и в соцсетях проекта.</p>
+          <p class="muted">Новости, заявки и общение — в Discord и соцсетях проекта.</p>
         </div>
         <div class="cta__links">
-          <a class="btn" data-link="forum" href="#">Форум</a>
-          <a class="btn btn--ghost" data-link="discord" href="#">Discord</a>
-          <a class="btn btn--ghost" data-link="vk" href="#">ВКонтакте</a>
-          <a class="btn btn--ghost" data-link="telegram" href="#">Telegram</a>
+          <a class="btn" data-link="discord" href="#"><img src="img/discord.png" alt="" class="btn__ico">Discord</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">© <span id="year"></span> <span data-site="name">Nobarsk RP</span></div>
-  </footer>
+  <footer class="footer" id="site-footer"></footer>
 
   <script src="script.js"></script>
 </body>
