@@ -172,7 +172,7 @@
         if (decodeURIComponent(location.hash.slice(1)) === node.id) render();
       };
       var sc = document.createElement("script");
-      sc.src = node.src;
+      sc.src = node.src + (window.SITE_VERSION ? "?v=" + window.SITE_VERSION : "");
       sc.onload = function () { done(true); };
       sc.onerror = function () { done(false); };
       document.head.appendChild(sc);
